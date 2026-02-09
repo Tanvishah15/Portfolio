@@ -16,12 +16,20 @@
     --hover-color: #1e40af;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-white);
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .container {
@@ -127,9 +135,13 @@ body {
 /* Sections */
 .section {
     padding: 100px 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow: visible;
+    min-height: auto;
+    visibility: visible;
+    opacity: 1;
 }
 
 .section-title {
@@ -143,6 +155,11 @@ body {
 /* Home Section */
 .home-section {
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
 
 .home-content {
@@ -152,6 +169,7 @@ body {
     align-items: center;
     gap: 4rem;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .profile-image-container {
@@ -242,11 +260,13 @@ body {
 /* About Section */
 .about-section {
     background-color: var(--bg-white);
+    padding: 120px 0;
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .about-content p {
@@ -259,6 +279,7 @@ body {
 /* Education Section */
 .education-section {
     background-color: var(--bg-light);
+    padding: 120px 0;
 }
 
 .education-grid {
@@ -308,6 +329,7 @@ body {
 /* Skills Section */
 .skills-section {
     background-color: var(--bg-white);
+    padding: 120px 0;
 }
 
 .skills-container {
@@ -368,6 +390,7 @@ body {
 /* Projects Section */
 .projects-section {
     background-color: var(--bg-light);
+    padding: 120px 0;
 }
 
 .projects-grid {
@@ -434,6 +457,7 @@ body {
 /* Experience Section */
 .experience-section {
     background-color: var(--bg-white);
+    padding: 120px 0;
 }
 
 .experience-card {
@@ -489,6 +513,7 @@ body {
 /* Certifications Section */
 .certifications-section {
     background-color: var(--bg-light);
+    padding: 120px 0;
 }
 
 .certifications-content {
@@ -536,6 +561,7 @@ body {
 /* Contact Section */
 .contact-section {
     background-color: var(--bg-white);
+    padding: 120px 0;
 }
 
 .contact-content {
@@ -640,7 +666,27 @@ body {
     }
 
     .section {
-        padding: 80px 0;
+        padding: 80px 0 !important;
+        display: block !important;
+        min-height: auto !important;
+    }
+    
+    .home-section {
+        padding-top: 80px !important;
+        min-height: 100vh !important;
+        display: flex !important;
+    }
+    
+    .about-section,
+    .education-section,
+    .skills-section,
+    .projects-section,
+    .experience-section,
+    .certifications-section,
+    .contact-section {
+        padding: 80px 0 !important;
+        display: block !important;
+        min-height: auto !important;
     }
 
     .home-buttons {
